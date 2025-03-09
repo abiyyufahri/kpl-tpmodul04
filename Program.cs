@@ -8,3 +8,12 @@ Console.WriteLine(val);
 val = KodePos.GetKodePos(KodePos.Kelurahan.Mengger);
 Console.WriteLine(val);
 
+Console.WriteLine("===================================================");
+
+DoorMachine door = new DoorMachine();
+Console.WriteLine($"Status awal: {door.GetCurrentState()}");
+
+door.ActivateTrigger(DoorMachine.Trigger.BUKA_PINTU);
+door.ActivateTrigger(DoorMachine.Trigger.BUKA_PINTU); 
+door.ActivateTrigger(DoorMachine.Trigger.KUNCI_PINTU);
+door.ActivateTrigger(DoorMachine.Trigger.KUNCI_PINTU); 
