@@ -36,7 +36,6 @@ namespace tpmodul4_103022300121
                 new Transition(DoorState.TERBUKA, DoorState.TERBUKA, Trigger.BUKA_PINTU)
             };
         }
-
         private DoorState GetNextState(DoorState prevState, Trigger trigger)
         {
             foreach (var transition in transitions)
@@ -48,7 +47,6 @@ namespace tpmodul4_103022300121
             }
             return prevState;
         }
-
         public void ActivateTrigger(Trigger trigger)
         {
             DoorState nextState = GetNextState(currentState, trigger);
